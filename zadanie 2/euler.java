@@ -1,3 +1,4 @@
+//program znajduje najwiekszy palindrom utworzony z iloczynu dwoch liczb 3 cyfrowych
 public class euler
 {
     public static void main(String[] args)

@@ -1,4 +1,4 @@
-public class test
+public class euler
 {
 	static public void main(String[] args)
 	{		

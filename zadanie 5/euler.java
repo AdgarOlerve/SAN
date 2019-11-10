@@ -1,3 +1,4 @@
+//program liczy,ktora liczba potrzebuje najwiecej krokow aby stac sie 1 na podstawie wzoru (jesli n jest parzyste n=n/2 w przeciwnym wypadku n=(n*3)+1
 public class euler
 {
 	static public void main(String[] args)
@@ -6,10 +7,10 @@ public class euler
 		int buf=0;
 		long x=0;
 		long max_x=0;
-		for(long i=1;i<1000000;)
+		for(int i=1;i<1000000;)
 		{
 			x=i;
-			System.out.println("Aktualnie sprawdzana liczba: "+x);
+			//System.out.println("Aktualnie sprawdzana liczba: "+x); //wyswietlanie kazdej sprawdzanej liczby bardzo wydluza prace programu
 			while(x!=1)
 			{
 				if(x%2==0)
@@ -22,7 +23,6 @@ public class euler
 					x=(3*x)+1;
 					buf++;
 				}
-				//System.out.println("po zmianie "+x);
 			}
 			if (buf>steps)
 			{

@@ -1,4 +1,4 @@
-
+//program liczy sumę parzystych liczb ciągu fibonaciego nie przekraczających 'fib_max'
 class euler
 {
     static public void main(String[] args)

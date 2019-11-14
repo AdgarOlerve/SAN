@@ -2,24 +2,24 @@ public class euler
 {
 	static public void main(String[] args)
 	{		
-			int zadana=400;
-			int suma=0;
-			int dzielniki=0;
-			int i=1;
+		int zadana=400;
+		int suma=0;
+		int dzielniki=0;
+		int i=1;
 			
-    			while(true)
+    		while(true)
+			{
+				suma+=i;
+				dzielniki=spr_dzielniki(suma);
+				System.out.println("suma "+suma);
+				System.out.println("dzielniki "+dzielniki);
+				if(dzielniki>zadana)
 				{
-					suma+=i;
-					dzielniki=spr_dzielniki(suma);
-					System.out.println("suma "+suma);
-					System.out.println("dzielniki "+dzielniki);
-					if(dzielniki>zadana)
-					{
-						System.out.println("Wartosc pierwszego trojkata,ktora ma wiecej niz "+zadana+" dzielnikow to: "+suma);
-						break;
-					}
-					i+=1;
+					System.out.println("Wartosc pierwszego trojkata,ktora ma wiecej niz "+zadana+" dzielnikow to: "+suma);
+					break;
 				}
+				i+=1;
+			}
 	}
 	static public int spr_dzielniki(int suma)
 	{

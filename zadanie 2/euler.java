@@ -17,11 +17,10 @@ public class euler
                z=x*y;
                String str_z="";
                String reversed="";
-
                str_z=Integer.toString(z);
                reversed=rev(str_z);
 
-               if(str_z.equalsIgnoreCase(reversed))
+               if(str_z.equalsIgnoreCase(reversed)&&z>pal_max)
                {
                    pal_max=z;
                }

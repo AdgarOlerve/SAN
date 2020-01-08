@@ -17,7 +17,7 @@ public class euler
 		prime_decomposer(triangle,primes,tab); //rozklada liczbe na czynniki pierwsze i zlicza ilosc wystepowan danego czynnika
 		wynik=defractiors_counter(tab);//liczy ilosc dzielnikow danej liczby
 		table_clear(tab);
-		if(wynik>lim)
+		if(wynik>lim) //jesli wynik(ilosc dzelnikow danej liczby)jest wiekszy niz 'lim' zostaje wyswietlny komunikat a program se zakancza
 		{
 			System.out.println("");
 			System.out.println("trojkat "+triangle);
@@ -27,15 +27,15 @@ public class euler
 		}
 		
 	}
-	static public int defractiors_counter(int[] tab)
+	static public int defractiors_counter(int[] tab)//liczy ilosc dzielnikow
 	{
 		int wynik=1;
 		for(int i=0;i<=tab.length-1;i++)
 		{
-			if(tab[i]>0) //zwieksza wartosc kazdego niezerowego czynnika o jeden
+			if(tab[i]>0) 
 			{
-				tab[i]++;
-				wynik=wynik*tab[i];
+				tab[i]++; //zwieksza kazdy czynnik inny niz zero o jeden
+				wynik=wynik*tab[i]; //mnozy ze soba wszystkie czynniki inne niz zero
 			}
 			
 		}
@@ -46,8 +46,8 @@ public class euler
 		int counter=0;
 		while(x>1)
 		{
-			int y=x%primes[counter];
-			if(y==0)
+			int y=x%primes[counter]; //sprawdza czy 'x' jest podzelny przez dana liczbe pierwsza
+			if(y==0) //jesli tak to go dzieli i zwieksza warosc liczacej ilosc wystapien danego czynnika o jeden
 			{
 				x=x/primes[counter];
 				tab[counter]++;
@@ -55,7 +55,7 @@ public class euler
 			}
 			else
 			{
-				counter++;
+				counter++; //jesli nie jest podzielny to zwieksza licznik
 			}
 		}
 	}
@@ -77,7 +77,6 @@ public class euler
 			counter--;
 		}
 	
-		System.out.println("trk "+x);
 		return x;
 	}
 	static public void generator_prim(int[] primes) //generuje liczby pierwsze

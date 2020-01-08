@@ -106,3 +106,10 @@ public class euler
 		}
 	}
 }
+/*
+1.Zrobic tablice wypelniona liczbami pierwszymi
+2.wygenerowac liczbe trojkatna
+3.rozlozyc ja na czynniki pierwsze przy pomocy liczb z tablicy liczac przy tym ilosc wystepowan kazdego czynnika(zapisac to do innej tablicy)
+4.do kazdej wartosci niezerowej z tabliczy czynnikow dodac jeden i pomnozyc je przez siebie
+5.wynik tego mnozenia to ilosc dzielnikow danej liczby,jesli jest wiekszy niz 500 to zakonczyc program
+*/

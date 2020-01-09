@@ -1,13 +1,15 @@
 //program liczy i zwraca wartość iloczynu skalarnego wektorów w przestrzeni R(n).
+//wypelnia macierz losowymi liczbami z zadanego przedzialu a nastepnie mnozy przez siebie kolejne rzedy
+//wynik zapisujac w wektorze 'result'
 import java.util.Random;
-public class skalar
+class euler
 {
 	public static void main(String[] args)
 	{
 		int vector_size=10; //wielkosc wektora
 		int vector_count=3; //ilosc wektorow
-		int range=50;
-		int counter=0;
+		int range=10;
+		int counter=1;
 		
 		int[][] vector=new int[vector_count][vector_size];
 		generator(vector_size,vector_count,range,vector);
@@ -24,9 +26,13 @@ public class skalar
 		{
 			for(int i=0;i<vector_size;i++)
 			{
-				
+				result[i]=result[i]*vector[counter][i];
 			}
 			counter++;
+		}
+		for(int i=0;i<vector_size;i++)
+		{
+			System.out.println(result[i]);
 		}
 	}
 
@@ -39,6 +45,7 @@ public class skalar
 			for(int j=0;j<size;j++)
 			{
 				vector[i][j]=((gen.nextInt(range)+1));
+				//System.out.println("randomizer "+i+" "+vector[i][j]);
 			}
 		}
 	}

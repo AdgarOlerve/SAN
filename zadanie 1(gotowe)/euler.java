@@ -5,7 +5,7 @@ class euler
     {
         int a=0,b=1,c=0,suma=0,fib_max=4_000_000;
 
-        do
+        while(c<=fib_max)
         {
             c=a+b;
             if((c%2)==0)
@@ -15,9 +15,7 @@ class euler
             a=b;
             b=c;
         }
-        while(c<=fib_max);
-        System.out.println("Suma: "+suma);
-
+    System.out.println("Suma: "+suma);
     }
 
 }

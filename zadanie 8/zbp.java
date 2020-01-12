@@ -42,14 +42,6 @@ public class zbp
 			System.out.println("");
 		}
 	}
-	public static void bin_show(int[] bin)
-	{
-		for(int i=bin.length-1;i>=0;i--)
-		{
-			System.out.print(bin[i]);
-		}
-		System.out.println("");
-	}
 	public static void bin_adder(int[] bin,int ile)//do tablicy bin dodaje wartosc zawarta w zmiennej 'ile' w systemie binarnym
 	{
 		for(int j=1;j<=ile;j++)
@@ -75,7 +67,7 @@ public class zbp
 			}
 		}
 	}
-	public static void matrix_fill(int[] input,int[][] output,int[] bin,int row_count)
+	public static void matrix_fill(int[] input,int[][] output,int[] bin,int row_count)//wypelnia tablice wynikami
 	{
 		int bin_pointer=bin.length-1;
 		bin_adder(bin,1);

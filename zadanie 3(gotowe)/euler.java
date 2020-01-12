@@ -5,31 +5,35 @@ public class euler
 	{
 		int a=3,b=4,c=5,suma=1000;
 		boolean is_pit=false;
-		boolean is_suma_1k=false;
+		boolean is_suma=false;
 		for(int i=3;i<=suma;i++)//iteruje a
 		{
 			for(int j=i+1;j<=suma;j++)//iteruje b
 			{
 				for(int k=j+1;k<=suma;k++)//iteruje c
 				{
-					is_suma_1k=false;//jesli obie te zmienne beda prawdziwe jednoczesnie
+					is_suma=false;//jesli obie te zmienne beda prawdziwe jednoczesnie
 					is_pit=false;	 //oznacza to,ze znaleziono szukana trojke pitagorejska
 					a=i;
 					b=j;
 					c=k;
-					is_suma_1k=check_sum(a,b,c,suma); //sprawdza czy suma a+b+c=1000
+					if(c%20==0)
+					{
+					System.out.println("a "+a+" "+"b "+b+" "+"c "+c);
+					}
+					is_suma=check_sum(a,b,c,suma); //sprawdza czy suma a+b+c=1000
 					is_pit=check_pit(a,b,c);		  //sprawdza czy trojka jest pitagorejska
-					if((is_suma_1k==true) && (is_pit==true)) //sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
+					if((is_suma==true) && (is_pit==true)) //sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
 					{
 						break;
 					}
 				}
-				if((is_suma_1k==true) && (is_pit==true))//sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
+				if((is_suma==true) && (is_pit==true))//sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
 					{
 						break;
 					}
 			}
-			if((is_suma_1k==true) && (is_pit==true))//sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
+			if((is_suma==true) && (is_pit==true))//sprawdzenie,czy oba warunki sa prawdziwe jednoczesnie
 					{
 						break;
 					}

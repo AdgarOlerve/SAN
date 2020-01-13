@@ -3,8 +3,8 @@ public class zbp
 {
 	public static void main(String[] args)
 	{
-		int range=10;
-		int size=3;//ilosc liczb na wejsciu
+		int range=100;
+		int size=5;//ilosc liczb na wejsciu
 		int row_count=matrix_size(size);//oblicza ilosc podzbiorow(ilosc wierszy macierzy z wynikiem)
 		int[] input=new int[size];
 		int[] bin=new int[size];
@@ -30,6 +30,7 @@ public class zbp
 			{
 				if(output[i][j]!=0)
 				{
+					System.out.print(" ");
 					System.out.print(output[i][j]);
 					System.out.print(" ");
 				}
@@ -71,7 +72,6 @@ public class zbp
 	{
 		int bin_pointer=bin.length-1;
 		bin_adder(bin,1);
-		//output[0][0]=0;//pierwszy ustawiony na pusty
 		for(int i=1;i<=row_count-1;i++)//iteruje po wierszach
 		{
 			for(int j=0;j<=input.length-1;j++)//iteruje po kolumnach

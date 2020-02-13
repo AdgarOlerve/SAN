@@ -45,7 +45,7 @@ public class zbp
 	}
 	public static void bin_adder(int[] bin,int ile)//do tablicy bin dodaje wartosc zawarta w zmiennej 'ile' w systemie binarnym
 	{
-		for(int j=1;j<=ile;j++)
+		for(int j=0;j<=ile;j++)
 		{
 			for(int i=bin.length-1;i>=0;i--)
 			{
